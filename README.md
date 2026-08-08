@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # finance_app
 
 Finance-app
@@ -15,3 +16,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# Finance-app
+>>>>>>> 6e4080681845ac2de472b508249f85b017d48bf2
