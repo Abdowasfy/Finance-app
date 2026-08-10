@@ -7,5 +7,5 @@ class AppRoutes {
   static const String newpassword = "/newpassword";
   static const String verifyOtpScreen = "/verifyOtpScreen";
   static const String mainscreen = "/mainscreen";
-  static const String homeScreen = "/homeScreen";
+  static const String homepage = "/homepage";
 }

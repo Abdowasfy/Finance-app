@@ -74,6 +74,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     if (formKey.currentState!.validate()) {
                       print(emailController.text);
                     }
+                    GoRouter.of(context).push(AppRoutes.verifyOtpScreen);
                   },
                 ),
                 const Gap(360),

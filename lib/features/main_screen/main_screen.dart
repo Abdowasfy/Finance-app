@@ -1,6 +1,11 @@
 import 'package:finance_app/core/styling/app_colors.dart';
+import 'package:finance_app/features/Statistic/Statistic_screen.dart';
+import 'package:finance_app/features/Statistic/provider/statistic_provider.dart';
+import 'package:finance_app/features/home_page/home_page_screen.dart';
+import 'package:finance_app/features/home_page/provider/home_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -13,11 +18,15 @@ class _HomeScreenState extends State<MainScreen> {
   int currentIndex = 0;
 
   List<Widget> pages = [
-    Container(color: Colors.red),
-    Container(color: Colors.yellow),
+    ChangeNotifierProvider(
+      create: (context) => HomeProvider(),
+      child: const HomePageScreen()),
+    ChangeNotifierProvider(
+      create: (context) => StatisticProvider(),
+      child: const StatisticScreen()),
     Container(color: Colors.green),
     Container(color: Colors.blue),
-    Container(color: Colors.red),
+    Container(color: Colors.brown),
   ];
 
   @override
@@ -43,33 +52,18 @@ class _HomeScreenState extends State<MainScreen> {
         },
 
         items: [
-          // Home
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.sp,
-            ),
-            activeIcon: Icon(
-              Icons.home,
-              size: 24.sp,
-            ),
+            icon: Icon(Icons.home_outlined, size: 24.sp),
+            activeIcon: Icon(Icons.home, size: 24.sp),
             label: "Home",
           ),
 
-          // Statistic
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.stacked_bar_chart_outlined,
-              size: 24.sp,
-            ),
-            activeIcon: Icon(
-              Icons.stacked_bar_chart,
-              size: 24.sp,
-            ),
+            icon: Icon(Icons.stacked_bar_chart_outlined, size: 24.sp),
+            activeIcon: Icon(Icons.stacked_bar_chart, size: 24.sp),
             label: "Statistic",
           ),
 
-          // Add
           BottomNavigationBarItem(
             icon: Container(
               width: 48.sp,
@@ -79,38 +73,20 @@ class _HomeScreenState extends State<MainScreen> {
                 shape: BoxShape.circle,
               ),
               alignment: Alignment.center,
-              child: Icon(
-                Icons.add,
-                color: AppColors.whiteColor,
-                size: 28.sp,
-              ),
+              child: Icon(Icons.add, color: AppColors.whiteColor, size: 28.sp),
             ),
             label: "",
           ),
 
-          // My Card
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_balance_wallet_outlined,
-              size: 24.sp,
-            ),
-            activeIcon: Icon(
-              Icons.account_balance_wallet,
-              size: 24.sp,
-            ),
+            icon: Icon(Icons.account_balance_wallet_outlined, size: 24.sp),
+            activeIcon: Icon(Icons.account_balance_wallet, size: 24.sp),
             label: "My card",
           ),
 
-          // Profile
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_outline,
-              size: 24.sp,
-            ),
-            activeIcon: Icon(
-              Icons.person,
-              size: 24.sp,
-            ),
+            icon: Icon(Icons.person_outline, size: 24.sp),
+            activeIcon: Icon(Icons.person, size: 24.sp),
             label: "Profil",
           ),
         ],

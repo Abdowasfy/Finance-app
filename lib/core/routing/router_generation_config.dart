@@ -2,13 +2,15 @@ import 'package:finance_app/core/routing/app_routes.dart';
 import 'package:finance_app/features/auth/forget_password.dart';
 import 'package:finance_app/features/auth/login_screen.dart';
 import 'package:finance_app/features/auth/new_password.dart';
+import 'package:finance_app/features/auth/provider/auth_provider.dart';
 import 'package:finance_app/features/auth/verify_otp_screen.dart';
 import 'package:finance_app/features/auth/password_changed.dart';
 import 'package:finance_app/features/auth/register_screen.dart';
-import 'package:finance_app/features/main_screen/home_screen.dart';
+import 'package:finance_app/features/home_page/home_page_screen.dart';
 import 'package:finance_app/features/main_screen/main_screen.dart';
 import 'package:finance_app/features/on_boarding_screen/on_boarding_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
 class RouterGenerationConfig {
   static GoRouter goRouter = GoRouter(
@@ -22,7 +24,9 @@ class RouterGenerationConfig {
       GoRoute(
         path: AppRoutes.loginScreen,
         name: AppRoutes.loginScreen,
-        builder: (context, state) => const LoginScreen(),
+        builder: (context, state) => ChangeNotifierProvider(
+          create: (context) => AuthProvider(),
+          child: const LoginScreen()),
       ),
       GoRoute(
         path: AppRoutes.registerScreen,
@@ -55,10 +59,11 @@ class RouterGenerationConfig {
         builder: (context, state) => const MainScreen(),
       ),
       GoRoute(
-        path: AppRoutes.homeScreen,
-        name: AppRoutes.homeScreen,
-        builder: (context, state) => const HomeScreen(),
+        path: AppRoutes.homepage,
+        name: AppRoutes.homepage,
+        builder: (context, state) => const HomePageScreen(),
       ),
+      
     ],
   );
 }

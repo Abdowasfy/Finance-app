@@ -38,4 +38,10 @@ class AppStyles {
     fontWeight: FontWeight.bold,
     color:Color(0xff202955),
   );
+  static TextStyle black18boldStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.balckColor,
+  );
 }

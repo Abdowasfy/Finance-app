@@ -1,21 +1,78 @@
-<<<<<<< HEAD
-# finance_app
+# 💰 Finance App
 
-Finance-app
+A modern and responsive finance management mobile application built with **Flutter**.
 
-## Getting Started
+The app provides a clean and user-friendly interface for managing financial cards, viewing statistics, and handling user account information.
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔐 User Authentication
+  - Login
+  - Register
+  - Forgot Password
+  - OTP Verification
+  - Reset Password
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- 💳 Card Management
+  - View available cards
+  - Display card balance
+  - Card details
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# Finance-app
->>>>>>> 6e4080681845ac2de472b508249f85b017d48bf2
+- 📊 Statistics
+  - Income and expense overview
+  - Monthly financial statistics
+  - Interactive charts
+
+- 👤 Profile
+  - View user information
+  - Personal profile details
+
+- 📱 Responsive UI
+  - Responsive layouts for different screen sizes
+  - Adaptive UI using `flutter_screenutil`
+
+- 🔄 State Management
+  - State management using `Provider`
+  - Separation between UI and application state
+
+## 🛠️ Technologies & Packages
+
+- **Flutter**
+- **Dart**
+- **Provider** – State Management
+- **Flutter ScreenUtil** – Responsive UI
+- **FL Chart** – Financial charts
+- **Gap** – UI spacing
+- **Flutter SVG** – SVG assets
+- **Google Fonts** – Custom fonts
+
+## 📁 Project Structure
+
+```text
+lib/
+│
+├── features/
+│   │
+│   ├── auth/
+│   │   ├── provider/
+│   │   ├── widgets/
+│   │   └── screens/
+│   │
+│   ├── home_page/
+│   │   └── widget/
+│   │
+│   ├── statistics/
+│   │   ├── provider/
+│   │   └── statistics_screen.dart
+│   │
+│   ├── main_screen/
+│   │   └── main_screen.dart
+│   │
+│   └── on_boarding_screen/
+│
+├── core/
+│   ├── routing/
+│   ├── styling/
+│   └── ...
+│
+└── main.dart
