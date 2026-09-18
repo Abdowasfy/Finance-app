@@ -3,6 +3,7 @@ import 'package:finance_app/features/Statistic/Statistic_screen.dart';
 import 'package:finance_app/features/Statistic/provider/statistic_provider.dart';
 import 'package:finance_app/features/home_page/home_page_screen.dart';
 import 'package:finance_app/features/home_page/provider/home_provider.dart';
+import 'package:finance_app/features/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<MainScreen> {
       child: const StatisticScreen()),
     Container(color: Colors.green),
     Container(color: Colors.blue),
-    Container(color: Colors.brown),
+    ProfileScreen(),
   ];
 
   @override
