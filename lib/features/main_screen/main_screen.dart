@@ -1,6 +1,7 @@
 import 'package:finance_app/core/styling/app_colors.dart';
 import 'package:finance_app/features/Statistic/Statistic_screen.dart';
 import 'package:finance_app/features/Statistic/provider/statistic_provider.dart';
+import 'package:finance_app/features/add_card/add_card_screen.dart';
 import 'package:finance_app/features/all_card/all_card_screen.dart';
 import 'package:finance_app/features/home_page/home_page_screen.dart';
 import 'package:finance_app/features/home_page/provider/home_provider.dart';
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<MainScreen> {
     ChangeNotifierProvider(
       create: (context) => StatisticProvider(),
       child: const StatisticScreen()),
-    Container(color: Colors.green),
+    AddCardScreen(),
     AllCardScreen(),
     ProfileScreen(),
   ];
