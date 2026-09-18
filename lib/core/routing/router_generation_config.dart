@@ -1,4 +1,5 @@
 import 'package:finance_app/core/routing/app_routes.dart';
+import 'package:finance_app/features/all_card/all_card_screen.dart';
 import 'package:finance_app/features/auth/forget_password.dart';
 import 'package:finance_app/features/auth/login_screen.dart';
 import 'package:finance_app/features/auth/new_password.dart';
@@ -9,6 +10,7 @@ import 'package:finance_app/features/auth/register_screen.dart';
 import 'package:finance_app/features/home_page/home_page_screen.dart';
 import 'package:finance_app/features/main_screen/main_screen.dart';
 import 'package:finance_app/features/on_boarding_screen/on_boarding_screen.dart';
+import 'package:finance_app/features/profile/profile_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
@@ -62,6 +64,16 @@ class RouterGenerationConfig {
         path: AppRoutes.homepage,
         name: AppRoutes.homepage,
         builder: (context, state) => const HomePageScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.profile,
+        name: AppRoutes.profile,
+        builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.allCard,
+        name: AppRoutes.allCard,
+        builder: (context, state) => const AllCardScreen(),
       ),
       
     ],

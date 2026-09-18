@@ -55,7 +55,10 @@ class ProfileScreen extends StatelessWidget {
                     subTitle: "01117738630",
                   ),
                   const Gap(9),
-                  CustomProfileText(title: "Address", subTitle: "Cairo,Egypt"),
+                  CustomProfileText(
+                  title: "Address", 
+                  subTitle: "Cairo,Egypt"
+                  ),
                   const Gap(9),
                 ],
               ),

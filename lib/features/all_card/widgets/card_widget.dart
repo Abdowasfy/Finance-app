@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-class CartItemWidget extends StatelessWidget {
+class CardWidget extends StatelessWidget {
   final String title;
   final String subTitle;
   final String balance;
   final String date;
   final String number;
 
-  const CartItemWidget({
+  const CardWidget({
     super.key,
     required this.title,
     required this.balance,
@@ -25,8 +25,8 @@ class CartItemWidget extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          width: 207.w,
-          height: 263.h,
+          width: 327.w,
+          height: 220.h,
           decoration: BoxDecoration(
             color: AppColors.primaryColor,
             borderRadius: BorderRadius.circular(16.r),

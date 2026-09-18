@@ -42,9 +42,9 @@ class _CustomCarouselWidgetState extends State<CustomCarouselWidget> {
             ),
             CartItemWidget(
               title: "X-Card",
-              balance: "23400 EG",
+              balance: "3209 EG",
               date: "12/24",
-              number: "****  3434",
+              number: "****  4545",
               subTitle: "Balance",
             ),
             CartItemWidget(
